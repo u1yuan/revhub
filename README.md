@@ -16,6 +16,8 @@ Look: light-mode "Canvas in a terminal" — paper background, white panels,
 | | Module 6 | 15 | 60 min |
 | | Formative Assessment 6 | 28 | 60 min |
 | | All (every unique question; overlaps counted once) | 46 | 60 min |
+| | SA4 Mock Exam Set A | 79 displayed · 77 scored | 60 min |
+| | SA4 Mock Exam Set B | 52 | 60 min |
 | **CS0075 · Machine Learning and Algorithms** | SA3 Mock Set A — Decision Trees, Random Forests, Gradient Boosting, and SVM | 60 | 60 min |
 | | SA3 Mock Set B (same questions, separate attempt) | 60 | 60 min |
 | | SA 3 Concepts & Hyperparameters | 50 | 60 min |
@@ -69,6 +71,27 @@ data and preserve its content and keys; source player behavior does not replace
 RevHub's fixed-order, no-backtracking rules. Do not present imports as standalone
 HTML players, embedded pages, or special course cards. This convention is also
 recorded in `AGENTS.md` for future agents.
+
+## DevNet SA4 mock exams
+
+SA4 Mock Exam Set A is available at `/courses/devnet/sa4-mock-exam-set-a/`
+and imports the two summative sections (50 original and 29 additional
+questions) from `public/reviewers/devnet-sa4-reviewer.html`, in source order.
+Its two explicitly unscored questions remain available for review and do not
+affect its 77-point score. SA4 Mock Exam Set B is at
+`/courses/devnet/sa4-mock-exam-set-b/`; it imports the 52 multiple-choice
+items from `public/reviewers/devasc-m7-m8-question-bank.json`. The 35 flashcards
+are archived in the original source and excluded from this exam. Three exhibit
+images are extracted from the HTML source, including the image absent from the
+JSON record for the Module 8 quiz item. Both use the shared 60-minute Exam and
+untimed Prep flow with separate saved attempts.
+
+Re-import or check the generated assessment data and exhibits with:
+
+```bash
+python scripts/import-devnet-sa4.py
+python scripts/import-devnet-sa4.py --check
+```
 
 ## Routes
 

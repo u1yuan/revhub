@@ -142,7 +142,7 @@ export default function QuestionView({ bank, attempt, question, remaining, notic
           )}
 
           <div className="feedback-slot" aria-live="polite">
-            {isLocked && prep && <Feedback question={question} answer={locked} correct={correct} />}
+            {isLocked && prep && (question.unscored ? <UnscoredFeedback question={question} answer={locked} /> : <Feedback question={question} answer={locked} correct={correct} />)}
             {isLocked && !prep && (
               <div className="feedback feedback--locked" role="status">
                 <p className="feedback__verdict">Answer locked.</p>
@@ -381,4 +381,10 @@ function Feedback({ question, answer, correct }: { question: Question; answer: A
       </dl>
     </div>
   );
+}
+
+function UnscoredFeedback({ question, answer }: { question: Question; answer: Answer | undefined }) {
+  const yours = feedbackLines(question, answer, false);
+  const right = feedbackLines(question, answer, true);
+  return <div className="feedback feedback--locked" role="status"><p className="feedback__verdict">Unscored</p><dl className="feedback__grid"><div><dt>Your answer</dt><dd>{yours.length ? yours.map((x, i) => <span key={i}>{x}</span>) : <span>—</span>}</dd></div>{right.length > 0 && <div><dt>Marked answer</dt><dd>{right.map((x, i) => <span key={i}>{x}</span>)}</dd></div>}{question.explanation && <div><dt>Explanation</dt><dd className="feedback__explain">{question.explanation}</dd></div>}</dl></div>;
 }

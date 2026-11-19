@@ -10,9 +10,9 @@ import { feedbackLines } from "./QuestionView";
 
 export default function Results({ bank, attempt, onRestart }: { bank: QuestionBank; attempt: Attempt; onRestart: () => void }) {
   const { correct, total, percent } = scoreAttempt(bank.questions, attempt.answers);
-  const [filter, setFilter] = useState<"all" | "incorrect" | "correct">("all");
+  const [filter, setFilter] = useState<"all" | "incorrect" | "correct" | "unscored">("all");
   const reviewRef = useRef<HTMLHeadingElement>(null);
-  const questions = bank.questions.filter((q) => filter === "all" || gradeAnswer(q, attempt.answers[q.id]) === (filter === "correct"));
+  const questions = bank.questions.filter((q) => filter === "all" || (filter === "unscored" ? q.unscored : !q.unscored && gradeAnswer(q, attempt.answers[q.id]) === (filter === "correct")));
   const headRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => headRef.current?.focus({ preventScroll: true }), []);
   const courseHref = `/courses/${bank.courseId}`;
@@ -59,23 +59,23 @@ export default function Results({ bank, attempt, onRestart }: { bank: QuestionBa
             Review · {total} questions
           </h2>
           <div className="filters" role="group" aria-label="Filter answer review">
-            {(["all", "incorrect", "correct"] as const).map((value) => <button key={value} type="button" className="filter-btn" aria-pressed={filter === value} onClick={() => setFilter(value)}>{value === "all" ? "All" : value === "incorrect" ? "Incorrect" : "Correct"} ({value === "all" ? total : value === "correct" ? correct : total - correct})</button>)}
+            {(["all", "incorrect", "correct", "unscored"] as const).map((value) => <button key={value} type="button" className="filter-btn" aria-pressed={filter === value} onClick={() => setFilter(value)}>{value === "all" ? "All" : value === "incorrect" ? "Incorrect" : value === "correct" ? "Correct" : "Unscored"} ({value === "all" ? bank.questions.length : value === "correct" ? correct : value === "unscored" ? bank.questions.filter((q) => q.unscored).length : total - correct})</button>)}
           </div>
           <p className="review-count" role="status">{questions.length} questions shown</p>
           {questions.length === 0 && <p className="review-count">No {filter} answers. <button type="button" className="link-btn" onClick={() => setFilter("all")}>Show all answers</button></p>}
           <ol className="review__list">
             {questions.map((q) => {
               const a = attempt.answers[q.id];
-              const ok = gradeAnswer(q, a);
+              const ok = !q.unscored && gradeAnswer(q, a);
               const yours = a ? feedbackLines(q, a, false) : [];
               const right = feedbackLines(q, a, true);
               return (
                 <li value={q.number} key={q.id} className={`review__item ${ok ? "is-correct" : "is-wrong"}`}>
                   <span className="review__num">{q.number}</span>
-                  <span className={`verdict ${ok ? "verdict--correct" : "verdict--wrong"}`}>{ok ? "Correct" : "Incorrect"}</span>
+                  <span className={`verdict ${q.unscored ? "" : ok ? "verdict--correct" : "verdict--wrong"}`}>{q.unscored ? "Unscored" : ok ? "Correct" : "Incorrect"}</span>
                   <div className="review__body">
                     <p className="review__prompt">{q.prompt}</p>
-                    <dl className="review__answers">
+                    {q.unscored ? null : <dl className="review__answers">
                       <div className={ok ? "is-correct" : "is-wrong"}>
                         <dt>your:</dt>
                         <dd>{yours.length ? yours.map((y, i) => <span key={i}>{y}</span>) : <span>— no answer</span>}</dd>
@@ -86,7 +86,7 @@ export default function Results({ bank, attempt, onRestart }: { bank: QuestionBa
                           <dd>{right.map((r, i) => <span key={i}>{r}</span>)}</dd>
                         </div>
                       )}
-                    </dl>
+                    </dl>}
                     {q.explanation && <p className="review__explain">{q.explanation}</p>}
                   </div>
                 </li>

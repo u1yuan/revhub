@@ -58,15 +58,15 @@ export default function StartScreen({ bank, onStart }: { bank: QuestionBank; onS
           <label className={`mode-card${mode === "prep" ? " is-selected" : ""}`}><input type="radio" name="mode" value="prep" checked={mode === "prep"} onChange={() => setMode("prep")} />
             <span className="mode-card__name">Prep mode</span>
             <span className="mode-card__desc">
-              Correct or incorrect, the right answer{bank.questions.some((q) => q.explanation) ? ", and an explanation" : ""} after every submit. No timer.
+              {bank.questions.some((q) => q.unscored) ? "Scored questions show correct or incorrect; unscored questions show a neutral review." : `Correct or incorrect, the right answer${bank.questions.some((q) => q.explanation) ? ", and an explanation" : ""} after every submit.`} No timer.
             </span>
             <span className="mode-card__go" aria-hidden="true">SELECT →</span>
           </label>
           <label className={`mode-card${mode === "exam" ? " is-selected" : ""}`}><input type="radio" name="mode" value="exam" checked={mode === "exam"} onChange={() => setMode("exam")} />
             <span className="mode-card__name">Exam mode</span>
             <span className="mode-card__desc">
-              No feedback until the end. Score and full review after question {n}.
-              {minutes ? ` ${minutes}-minute countdown; at 00:00 the attempt submits itself and unanswered questions count as incorrect.` : ""}
+              No feedback until the end. Score and full review after question {n}; unscored questions are excluded from the score.
+              {minutes ? ` ${minutes}-minute countdown; at 00:00 the attempt submits itself and unanswered scored questions count as incorrect.` : ""}
             </span>
             <span className="mode-card__go" aria-hidden="true">SELECT →</span>
           </label>

@@ -1,0 +1,2298 @@
+{
+  "id": "devnet-sa4-mock-exam-set-a",
+  "questions": [
+    {
+      "id": "s5q1",
+      "type": "single",
+      "prompt": "Which tool traces the path packets take through a network?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q1-1",
+          "text": "ipconfig",
+          "correct": false
+        },
+        {
+          "id": "s5q1-2",
+          "text": "nslookup",
+          "correct": false
+        },
+        {
+          "id": "s5q1-3",
+          "text": "ping",
+          "correct": false
+        },
+        {
+          "id": "s5q1-4",
+          "text": "traceroute",
+          "correct": true
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q2",
+      "type": "single",
+      "prompt": "Which term describes a network that spans a single building?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q2-1",
+          "text": "Internet",
+          "correct": false
+        },
+        {
+          "id": "s5q2-2",
+          "text": "WAN",
+          "correct": false
+        },
+        {
+          "id": "s5q2-3",
+          "text": "LAN",
+          "correct": true
+        },
+        {
+          "id": "s5q2-4",
+          "text": "MAN",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q3",
+      "type": "single",
+      "prompt": "Which Cisco command verifies interface status?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q3-1",
+          "text": "show vlan brief",
+          "correct": false
+        },
+        {
+          "id": "s5q3-2",
+          "text": "show ip interface brief",
+          "correct": true
+        },
+        {
+          "id": "s5q3-3",
+          "text": "show running-config",
+          "correct": false
+        },
+        {
+          "id": "s5q3-4",
+          "text": "show version",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q4",
+      "type": "single",
+      "prompt": "Which frequency band is used by 802.11b Wi-Fi?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q4-1",
+          "text": "5 GHz",
+          "correct": false
+        },
+        {
+          "id": "s5q4-2",
+          "text": "900 MHz",
+          "correct": false
+        },
+        {
+          "id": "s5q4-3",
+          "text": "60 GHz",
+          "correct": false
+        },
+        {
+          "id": "s5q4-4",
+          "text": "2.4 GHz",
+          "correct": true
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q5",
+      "type": "single",
+      "prompt": "Which device operates primarily at Layer 2 of the OSI model?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q5-1",
+          "text": "Firewall",
+          "correct": false
+        },
+        {
+          "id": "s5q5-2",
+          "text": "Switch",
+          "correct": true
+        },
+        {
+          "id": "s5q5-3",
+          "text": "Server",
+          "correct": false
+        },
+        {
+          "id": "s5q5-4",
+          "text": "Router",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q6",
+      "type": "single",
+      "prompt": "Which protocol secures data using SSL/TLS?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q6-1",
+          "text": "HTTPS",
+          "correct": true
+        },
+        {
+          "id": "s5q6-2",
+          "text": "TFTP",
+          "correct": false
+        },
+        {
+          "id": "s5q6-3",
+          "text": "FTP",
+          "correct": false
+        },
+        {
+          "id": "s5q6-4",
+          "text": "HTTP",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q7",
+      "type": "single",
+      "prompt": "Which routing protocol uses link-state advertisements?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q7-1",
+          "text": "RIP",
+          "correct": false
+        },
+        {
+          "id": "s5q7-2",
+          "text": "OSPF",
+          "correct": true
+        },
+        {
+          "id": "s5q7-3",
+          "text": "BGP",
+          "correct": false
+        },
+        {
+          "id": "s5q7-4",
+          "text": "EIGRP",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q8",
+      "type": "single",
+      "prompt": "Which address is used by a device to communicate with all devices on a subnet?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q8-1",
+          "text": "Loopback address",
+          "correct": false
+        },
+        {
+          "id": "s5q8-2",
+          "text": "Anycast address",
+          "correct": false
+        },
+        {
+          "id": "s5q8-3",
+          "text": "Gateway address",
+          "correct": false
+        },
+        {
+          "id": "s5q8-4",
+          "text": "Broadcast address",
+          "correct": true
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q9",
+      "type": "single",
+      "prompt": "Which device is commonly used to protect internal networks from unauthorized access?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q9-1",
+          "text": "Switch",
+          "correct": false
+        },
+        {
+          "id": "s5q9-2",
+          "text": "Hub",
+          "correct": false
+        },
+        {
+          "id": "s5q9-3",
+          "text": "Firewall",
+          "correct": true
+        },
+        {
+          "id": "s5q9-4",
+          "text": "Router",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q10",
+      "type": "single",
+      "prompt": "Which command tests end-to-end reachability on a network?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q10-1",
+          "text": "arp",
+          "correct": false
+        },
+        {
+          "id": "s5q10-2",
+          "text": "nslookup",
+          "correct": false
+        },
+        {
+          "id": "s5q10-3",
+          "text": "ipconfig",
+          "correct": false
+        },
+        {
+          "id": "s5q10-4",
+          "text": "ping",
+          "correct": true
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q11",
+      "type": "single",
+      "prompt": "What is the primary purpose of a VLAN?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q11-1",
+          "text": "Encrypt traffic",
+          "correct": false
+        },
+        {
+          "id": "s5q11-2",
+          "text": "Authenticate users",
+          "correct": false
+        },
+        {
+          "id": "s5q11-3",
+          "text": "Segment networks logically",
+          "correct": true
+        },
+        {
+          "id": "s5q11-4",
+          "text": "Compress data",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q12",
+      "type": "single",
+      "prompt": "Which device learns MAC addresses and forwards frames accordingly?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q12-1",
+          "text": "Switch",
+          "correct": true
+        },
+        {
+          "id": "s5q12-2",
+          "text": "Router",
+          "correct": false
+        },
+        {
+          "id": "s5q12-3",
+          "text": "Firewall",
+          "correct": false
+        },
+        {
+          "id": "s5q12-4",
+          "text": "Hub",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q13",
+      "type": "single",
+      "prompt": "Which IPv6 address is automatically assigned to interfaces?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q13-1",
+          "text": "Link Local",
+          "correct": true
+        },
+        {
+          "id": "s5q13-2",
+          "text": "Multicast",
+          "correct": false
+        },
+        {
+          "id": "s5q13-3",
+          "text": "Unique Local",
+          "correct": false
+        },
+        {
+          "id": "s5q13-4",
+          "text": "Anycast",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q14",
+      "type": "single",
+      "prompt": "Which cable type uses RJ-45 connectors?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q14-1",
+          "text": "Serial",
+          "correct": false
+        },
+        {
+          "id": "s5q14-2",
+          "text": "Fiber optic",
+          "correct": false
+        },
+        {
+          "id": "s5q14-3",
+          "text": "Coaxial",
+          "correct": false
+        },
+        {
+          "id": "s5q14-4",
+          "text": "Twisted pair",
+          "correct": true
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q15",
+      "type": "single",
+      "prompt": "What is the primary function of ARP?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q15-1",
+          "text": "Resolve hostnames to IP addresses",
+          "correct": false
+        },
+        {
+          "id": "s5q15-2",
+          "text": "Encrypt network traffic",
+          "correct": false
+        },
+        {
+          "id": "s5q15-3",
+          "text": "Assign IP addresses automatically",
+          "correct": false
+        },
+        {
+          "id": "s5q15-4",
+          "text": "Resolve IP addresses to MAC addresses",
+          "correct": true
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q16",
+      "type": "single",
+      "prompt": "Which IP class supports up to 254 hosts per network?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q16-1",
+          "text": "Class D",
+          "correct": false
+        },
+        {
+          "id": "s5q16-2",
+          "text": "Class C",
+          "correct": true
+        },
+        {
+          "id": "s5q16-3",
+          "text": "Class A",
+          "correct": false
+        },
+        {
+          "id": "s5q16-4",
+          "text": "Class B",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q17",
+      "type": "single",
+      "prompt": "Which protocol enables file transfers between network devices?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q17-1",
+          "text": "FTP",
+          "correct": true
+        },
+        {
+          "id": "s5q17-2",
+          "text": "SMTP",
+          "correct": false
+        },
+        {
+          "id": "s5q17-3",
+          "text": "SNMP",
+          "correct": false
+        },
+        {
+          "id": "s5q17-4",
+          "text": "NTP",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q18",
+      "type": "single",
+      "prompt": "What is the purpose of a default gateway?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q18-1",
+          "text": "To filter traffic",
+          "correct": false
+        },
+        {
+          "id": "s5q18-2",
+          "text": "To assign IP addresses",
+          "correct": false
+        },
+        {
+          "id": "s5q18-3",
+          "text": "To provide DNS resolution",
+          "correct": false
+        },
+        {
+          "id": "s5q18-4",
+          "text": "To forward traffic to remote networks",
+          "correct": true
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q19",
+      "type": "single",
+      "prompt": "What type of IPv6 address is equivalent to private IPv4 addresses?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q19-1",
+          "text": "Unique Local",
+          "correct": true
+        },
+        {
+          "id": "s5q19-2",
+          "text": "Anycast",
+          "correct": false
+        },
+        {
+          "id": "s5q19-3",
+          "text": "Global Unicast",
+          "correct": false
+        },
+        {
+          "id": "s5q19-4",
+          "text": "Link Local",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q20",
+      "type": "single",
+      "prompt": "What is the default port number for HTTPS?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q20-1",
+          "text": "443",
+          "correct": true
+        },
+        {
+          "id": "s5q20-2",
+          "text": "20",
+          "correct": false
+        },
+        {
+          "id": "s5q20-3",
+          "text": "21",
+          "correct": false
+        },
+        {
+          "id": "s5q20-4",
+          "text": "22",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q21",
+      "type": "single",
+      "prompt": "Which routing protocol is distance-vector based?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q21-1",
+          "text": "EIGRP",
+          "correct": false
+        },
+        {
+          "id": "s5q21-2",
+          "text": "RIP",
+          "correct": true
+        },
+        {
+          "id": "s5q21-3",
+          "text": "IS-IS",
+          "correct": false
+        },
+        {
+          "id": "s5q21-4",
+          "text": "OSPF",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q22",
+      "type": "single",
+      "prompt": "Which protocol automatically assigns IP addresses to devices?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q22-1",
+          "text": "ARP",
+          "correct": false
+        },
+        {
+          "id": "s5q22-2",
+          "text": "DNS",
+          "correct": false
+        },
+        {
+          "id": "s5q22-3",
+          "text": "DHCP",
+          "correct": true
+        },
+        {
+          "id": "s5q22-4",
+          "text": "HTTP",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q23",
+      "type": "single",
+      "prompt": "Which protocol is used for retrieving email?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q23-1",
+          "text": "SNMP",
+          "correct": false
+        },
+        {
+          "id": "s5q23-2",
+          "text": "IMAP",
+          "correct": true
+        },
+        {
+          "id": "s5q23-3",
+          "text": "FTP",
+          "correct": false
+        },
+        {
+          "id": "s5q23-4",
+          "text": "SMTP",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q24",
+      "type": "single",
+      "prompt": "Which layer uses IP addresses to route packets?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q24-1",
+          "text": "Application",
+          "correct": false
+        },
+        {
+          "id": "s5q24-2",
+          "text": "Physical",
+          "correct": false
+        },
+        {
+          "id": "s5q24-3",
+          "text": "Data Link",
+          "correct": false
+        },
+        {
+          "id": "s5q24-4",
+          "text": "Network",
+          "correct": true
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q25",
+      "type": "single",
+      "prompt": "Which IP protocol provides connectionless service?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q25-1",
+          "text": "HTTP",
+          "correct": false
+        },
+        {
+          "id": "s5q25-2",
+          "text": "UDP",
+          "correct": true
+        },
+        {
+          "id": "s5q25-3",
+          "text": "TCP",
+          "correct": false
+        },
+        {
+          "id": "s5q25-4",
+          "text": "ICMP",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q26",
+      "type": "single",
+      "prompt": "Which Cisco security tool provides sandboxing for suspicious files?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q26-1",
+          "text": "Meraki",
+          "correct": false
+        },
+        {
+          "id": "s5q26-2",
+          "text": "ISE",
+          "correct": false
+        },
+        {
+          "id": "s5q26-3",
+          "text": "AMP",
+          "correct": true
+        },
+        {
+          "id": "s5q26-4",
+          "text": "Umbrella",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q27",
+      "type": "single",
+      "prompt": "Which Cisco platform exposes an Intent API?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q27-1",
+          "text": "UCS",
+          "correct": false
+        },
+        {
+          "id": "s5q27-2",
+          "text": "Meraki",
+          "correct": false
+        },
+        {
+          "id": "s5q27-3",
+          "text": "DNA Center",
+          "correct": true
+        },
+        {
+          "id": "s5q27-4",
+          "text": "ISE",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q28",
+      "type": "single",
+      "prompt": "Which Cisco platform provides WAN transport independence and embedded security?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q28-1",
+          "text": "UCS",
+          "correct": false
+        },
+        {
+          "id": "s5q28-2",
+          "text": "ACI",
+          "correct": false
+        },
+        {
+          "id": "s5q28-3",
+          "text": "SD-WAN",
+          "correct": true
+        },
+        {
+          "id": "s5q28-4",
+          "text": "Meraki",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q29",
+      "type": "single",
+      "prompt": "In SD-WAN, which component authenticates new devices?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q29-1",
+          "text": "vBond",
+          "correct": true
+        },
+        {
+          "id": "s5q29-2",
+          "text": "vSmart",
+          "correct": false
+        },
+        {
+          "id": "s5q29-3",
+          "text": "UCS Manager",
+          "correct": false
+        },
+        {
+          "id": "s5q29-4",
+          "text": "vManage",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q30",
+      "type": "single",
+      "prompt": "Which protocol is most commonly used with YANG models?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q30-1",
+          "text": "NETCONF",
+          "correct": true
+        },
+        {
+          "id": "s5q30-2",
+          "text": "CLI",
+          "correct": false
+        },
+        {
+          "id": "s5q30-3",
+          "text": "RESTCONF",
+          "correct": false
+        },
+        {
+          "id": "s5q30-4",
+          "text": "SNMP",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q31",
+      "type": "single",
+      "prompt": "Cisco APIC Python SDK is called:",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q31-1",
+          "text": "Ansible SDK",
+          "correct": false
+        },
+        {
+          "id": "s5q31-2",
+          "text": "Cobra SDK",
+          "correct": true
+        },
+        {
+          "id": "s5q31-3",
+          "text": "DNA SDK",
+          "correct": false
+        },
+        {
+          "id": "s5q31-4",
+          "text": "UCS SDK",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q32",
+      "type": "single",
+      "prompt": "Which of the following is NOT a Cisco DevNet technology center?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q32-1",
+          "text": "Gaming",
+          "correct": true
+        },
+        {
+          "id": "s5q32-2",
+          "text": "Collaboration",
+          "correct": false
+        },
+        {
+          "id": "s5q32-3",
+          "text": "Security",
+          "correct": false
+        },
+        {
+          "id": "s5q32-4",
+          "text": "Cloud",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q33",
+      "type": "single",
+      "prompt": "UDS API in Unified CM is:",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q33-1",
+          "text": "REST-based",
+          "correct": true
+        },
+        {
+          "id": "s5q33-2",
+          "text": "CLI-only",
+          "correct": false
+        },
+        {
+          "id": "s5q33-3",
+          "text": "NETCONF-based",
+          "correct": false
+        },
+        {
+          "id": "s5q33-4",
+          "text": "SOAP-based",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q34",
+      "type": "single",
+      "prompt": "Which Cisco SDN solution runs on Nexus 9000 hardware?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q34-1",
+          "text": "NSO",
+          "correct": false
+        },
+        {
+          "id": "s5q34-2",
+          "text": "UCS",
+          "correct": false
+        },
+        {
+          "id": "s5q34-3",
+          "text": "ACI",
+          "correct": true
+        },
+        {
+          "id": "s5q34-4",
+          "text": "Meraki",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q35",
+      "type": "single",
+      "prompt": "RESTCONF is easier to learn for engineers with experience in which technology?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q35-1",
+          "text": "NETCONF",
+          "correct": false
+        },
+        {
+          "id": "s5q35-2",
+          "text": "Python SDKs",
+          "correct": false
+        },
+        {
+          "id": "s5q35-3",
+          "text": "REST APIs",
+          "correct": true
+        },
+        {
+          "id": "s5q35-4",
+          "text": "CLI",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q36",
+      "type": "single",
+      "prompt": "Which UCS API method is used for authentication?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q36-1",
+          "text": "aaaLogin",
+          "correct": true
+        },
+        {
+          "id": "s5q36-2",
+          "text": "netconf-yang",
+          "correct": false
+        },
+        {
+          "id": "s5q36-3",
+          "text": "configConfMo",
+          "correct": false
+        },
+        {
+          "id": "s5q36-4",
+          "text": "configResolveClass",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q37",
+      "type": "single",
+      "prompt": "Cisco ISE provides:",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q37-1",
+          "text": "Cloud file storage",
+          "correct": false
+        },
+        {
+          "id": "s5q37-2",
+          "text": "Policy-based access control",
+          "correct": true
+        },
+        {
+          "id": "s5q37-3",
+          "text": "Malware analysis",
+          "correct": false
+        },
+        {
+          "id": "s5q37-4",
+          "text": "WAN monitoring",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q38",
+      "type": "single",
+      "prompt": "Which command enables NETCONF on IOS XE devices?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q38-1",
+          "text": "enable-netconf",
+          "correct": false
+        },
+        {
+          "id": "s5q38-2",
+          "text": "netconf-yang",
+          "correct": true
+        },
+        {
+          "id": "s5q38-3",
+          "text": "config netconf",
+          "correct": false
+        },
+        {
+          "id": "s5q38-4",
+          "text": "restconf enable",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q39",
+      "type": "single",
+      "prompt": "Cisco Umbrella enforces security using:",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q39-1",
+          "text": "UCS profiles",
+          "correct": false
+        },
+        {
+          "id": "s5q39-2",
+          "text": "IP blocking",
+          "correct": false
+        },
+        {
+          "id": "s5q39-3",
+          "text": "API tokens",
+          "correct": false
+        },
+        {
+          "id": "s5q39-4",
+          "text": "DNS",
+          "correct": true
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q40",
+      "type": "single",
+      "prompt": "What Cisco APIC feature lets you view API messages generated by the GUI?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q40-1",
+          "text": "Command Inspector",
+          "correct": false
+        },
+        {
+          "id": "s5q40-2",
+          "text": "REST Analyzer",
+          "correct": false
+        },
+        {
+          "id": "s5q40-3",
+          "text": "API Inspector",
+          "correct": true
+        },
+        {
+          "id": "s5q40-4",
+          "text": "Policy Viewer",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q41",
+      "type": "single",
+      "prompt": "Which UCS API method retrieves objects by Distinguished Name (DN)?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q41-1",
+          "text": "aaaLogin",
+          "correct": false
+        },
+        {
+          "id": "s5q41-2",
+          "text": "queryDN",
+          "correct": false
+        },
+        {
+          "id": "s5q41-3",
+          "text": "configResolveDn",
+          "correct": true
+        },
+        {
+          "id": "s5q41-4",
+          "text": "configScope",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q42",
+      "type": "single",
+      "prompt": "Cisco UCS is described as:",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q42-1",
+          "text": "Malware protection",
+          "correct": false
+        },
+        {
+          "id": "s5q42-2",
+          "text": "WAN monitoring system",
+          "correct": false
+        },
+        {
+          "id": "s5q42-3",
+          "text": "Collaboration-only",
+          "correct": false
+        },
+        {
+          "id": "s5q42-4",
+          "text": "Hyperconverged infrastructure",
+          "correct": false
+        }
+      ],
+      "explanation": "None of the supplied choices accurately describes Cisco UCS by itself. UCS is a unified computing platform used in converged infrastructure; Cisco HyperFlex is a hyperconverged system built on UCS. The original key marked \"Hyperconverged infrastructure\", which conflates the two. The source wording is retained, and this question is excluded from scoring.\n\nReferences:\nCisco infrastructure classifications: https://www.cisco.com/c/en/us/products/collateral/nb-06-plus-as-a-service/hybrid-cloud/cisco-hybrid-cloud-ds.html",
+      "unscored": true
+    },
+    {
+      "id": "s5q43",
+      "type": "single",
+      "prompt": "Cisco Firepower Management Center integrates with:",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q43-1",
+          "text": "ISE",
+          "correct": true
+        },
+        {
+          "id": "s5q43-2",
+          "text": "DNA Center",
+          "correct": false
+        },
+        {
+          "id": "s5q43-3",
+          "text": "Meraki",
+          "correct": false
+        },
+        {
+          "id": "s5q43-4",
+          "text": "UCS",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q44",
+      "type": "single",
+      "prompt": "Which Cisco platform provides centralized management and analytics for enterprises?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q44-1",
+          "text": "UCS",
+          "correct": false
+        },
+        {
+          "id": "s5q44-2",
+          "text": "DNA Center",
+          "correct": true
+        },
+        {
+          "id": "s5q44-3",
+          "text": "Webex",
+          "correct": false
+        },
+        {
+          "id": "s5q44-4",
+          "text": "ACI",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q45",
+      "type": "single",
+      "prompt": "Cisco Meraki Dashboard API uses:",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q45-1",
+          "text": "NX-API",
+          "correct": false
+        },
+        {
+          "id": "s5q45-2",
+          "text": "REST over HTTPS with JSON",
+          "correct": true
+        },
+        {
+          "id": "s5q45-3",
+          "text": "SOAP/XML",
+          "correct": false
+        },
+        {
+          "id": "s5q45-4",
+          "text": "gRPC",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q46",
+      "type": "single",
+      "prompt": "Cisco Threat Grid specializes in:",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q46-1",
+          "text": "UCS orchestration",
+          "correct": false
+        },
+        {
+          "id": "s5q46-2",
+          "text": "Call routing",
+          "correct": false
+        },
+        {
+          "id": "s5q46-3",
+          "text": "Cloud management",
+          "correct": false
+        },
+        {
+          "id": "s5q46-4",
+          "text": "Malware analysis",
+          "correct": true
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q47",
+      "type": "single",
+      "prompt": "Cisco UCS Director provides which feature for users?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q47-1",
+          "text": "Intersight Ansible",
+          "correct": false
+        },
+        {
+          "id": "s5q47-2",
+          "text": "API Inspector",
+          "correct": false
+        },
+        {
+          "id": "s5q47-3",
+          "text": "Self-service catalog",
+          "correct": true
+        },
+        {
+          "id": "s5q47-4",
+          "text": "UI Extensions",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q48",
+      "type": "single",
+      "prompt": "Which of the following is NOT a YANG node type?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q48-1",
+          "text": "Leaf",
+          "correct": false
+        },
+        {
+          "id": "s5q48-2",
+          "text": "Root",
+          "correct": true
+        },
+        {
+          "id": "s5q48-3",
+          "text": "List",
+          "correct": false
+        },
+        {
+          "id": "s5q48-4",
+          "text": "Container",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q49",
+      "type": "single",
+      "prompt": "Cisco NSO’s Device Manager creates:",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q49-1",
+          "text": "UCS profiles",
+          "correct": false
+        },
+        {
+          "id": "s5q49-2",
+          "text": "Service templates only",
+          "correct": false
+        },
+        {
+          "id": "s5q49-3",
+          "text": "API Inspector logs",
+          "correct": false
+        },
+        {
+          "id": "s5q49-4",
+          "text": "Transactional change sequences",
+          "correct": true
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s5q50",
+      "type": "single",
+      "prompt": "What does YANG stand for?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s5q50-1",
+          "text": "Your API Network Guide",
+          "correct": false
+        },
+        {
+          "id": "s5q50-2",
+          "text": "Yet Another Next Generation",
+          "correct": true
+        },
+        {
+          "id": "s5q50-3",
+          "text": "YAML and Network Grammar",
+          "correct": false
+        },
+        {
+          "id": "s5q50-4",
+          "text": "Yielded Application Node Graph",
+          "correct": false
+        }
+      ],
+      "explanation": ""
+    },
+    {
+      "id": "s6q1",
+      "type": "single",
+      "prompt": "Which organization is responsible for IP address allocation?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q1-1",
+          "text": "IETF",
+          "correct": false
+        },
+        {
+          "id": "s6q1-2",
+          "text": "IEEE",
+          "correct": false
+        },
+        {
+          "id": "s6q1-3",
+          "text": "IANA",
+          "correct": true
+        },
+        {
+          "id": "s6q1-4",
+          "text": "ICANN",
+          "correct": false
+        }
+      ],
+      "explanation": "IANA coordinates global IP address space and allocates address pools to the regional Internet registries.\n\nReferences:\nAnswer reference: https://www.iana.org/numbers"
+    },
+    {
+      "id": "s6q2",
+      "type": "single",
+      "prompt": "What is a MAC address used for?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q2-1",
+          "text": "To identify devices on a local network",
+          "correct": true
+        },
+        {
+          "id": "s6q2-2",
+          "text": "To route traffic over the internet",
+          "correct": false
+        },
+        {
+          "id": "s6q2-3",
+          "text": "To provide secure access",
+          "correct": false
+        },
+        {
+          "id": "s6q2-4",
+          "text": "To monitor performance",
+          "correct": false
+        }
+      ],
+      "explanation": "A MAC address identifies a network interface for local data-link communication.\n\nReferences:\nAnswer reference: https://www.cisco.com/c/en/us/support/docs/lan-switching/ethernet/12006-chapter22.html"
+    },
+    {
+      "id": "s6q3",
+      "type": "single",
+      "prompt": "Which protocol is used to translate human-readable names to IP addresses?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q3-1",
+          "text": "NTP",
+          "correct": false
+        },
+        {
+          "id": "s6q3-2",
+          "text": "SNMP",
+          "correct": false
+        },
+        {
+          "id": "s6q3-3",
+          "text": "DHCP",
+          "correct": false
+        },
+        {
+          "id": "s6q3-4",
+          "text": "DNS",
+          "correct": true
+        }
+      ],
+      "explanation": "DNS maps domain names to records, including IP addresses.\n\nReferences:\nAnswer reference: https://www.rfc-editor.org/rfc/rfc1034.html"
+    },
+    {
+      "id": "s6q4",
+      "type": "single",
+      "prompt": "Which type of network topology uses a central hub?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q4-1",
+          "text": "Bus",
+          "correct": false
+        },
+        {
+          "id": "s6q4-2",
+          "text": "Ring",
+          "correct": false
+        },
+        {
+          "id": "s6q4-3",
+          "text": "Star",
+          "correct": true
+        },
+        {
+          "id": "s6q4-4",
+          "text": "Mesh",
+          "correct": false
+        }
+      ],
+      "explanation": "A star topology connects peripheral devices to a central hub or switch.\n\nReferences:\nAnswer reference: https://www.cisco.com/c/dam/en/us/td/docs/net_mgmt/configuration_assurance_solution/1-1/user/guide/audit_and_Analysis_spm/spmenusr.pdf"
+    },
+    {
+      "id": "s6q5",
+      "type": "single",
+      "prompt": "What is the function of DHCP?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q5-1",
+          "text": "To dynamically assign IP addresses to devices on a network",
+          "correct": true
+        },
+        {
+          "id": "s6q5-2",
+          "text": "To route traffic",
+          "correct": false
+        },
+        {
+          "id": "s6q5-3",
+          "text": "To provide secure access",
+          "correct": false
+        },
+        {
+          "id": "s6q5-4",
+          "text": "To monitor performance",
+          "correct": false
+        }
+      ],
+      "explanation": "DHCP automatically allocates IP addresses and supplies host configuration parameters.\n\nReferences:\nAnswer reference: https://www.rfc-editor.org/rfc/rfc2131.html"
+    },
+    {
+      "id": "s6q6",
+      "type": "single",
+      "prompt": "Which protocol is primarily used for secure network device management?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q6-1",
+          "text": "FTP",
+          "correct": false
+        },
+        {
+          "id": "s6q6-2",
+          "text": "SSH",
+          "correct": true
+        },
+        {
+          "id": "s6q6-3",
+          "text": "SMTP",
+          "correct": false
+        },
+        {
+          "id": "s6q6-4",
+          "text": "Telnet",
+          "correct": false
+        }
+      ],
+      "explanation": "SSH supplies encrypted remote login and secure remote management.\n\nReferences:\nAnswer reference: https://www.rfc-editor.org/rfc/rfc4251.html"
+    },
+    {
+      "id": "s6q7",
+      "type": "single",
+      "prompt": "What does a DNS server do?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q7-1",
+          "text": "Translates domain names to IP addresses",
+          "correct": true
+        },
+        {
+          "id": "s6q7-2",
+          "text": "Assigns IP addresses dynamically",
+          "correct": false
+        },
+        {
+          "id": "s6q7-3",
+          "text": "Routes traffic",
+          "correct": false
+        },
+        {
+          "id": "s6q7-4",
+          "text": "Provides secure access",
+          "correct": false
+        }
+      ],
+      "explanation": "DNS can resolve domain names to IP addresses.\n\nReferences:\nAnswer reference: https://www.rfc-editor.org/rfc/rfc1034.html"
+    },
+    {
+      "id": "s6q8",
+      "type": "single",
+      "prompt": "Which protocol is used for email retrieval?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q8-1",
+          "text": "SMTP",
+          "correct": false
+        },
+        {
+          "id": "s6q8-2",
+          "text": "POP3",
+          "correct": false
+        },
+        {
+          "id": "s6q8-3",
+          "text": "IMAP",
+          "correct": false
+        },
+        {
+          "id": "s6q8-4",
+          "text": "Both POP3 and IMAP",
+          "correct": true
+        }
+      ],
+      "explanation": "Both POP3 and IMAP support retrieving or accessing email. SMTP is used for mail submission and transfer.\n\nReferences:\nAnswer reference: https://www.rfc-editor.org/rfc/rfc9051.html\nPOP3 specification: https://www.rfc-editor.org/rfc/rfc1939.html"
+    },
+    {
+      "id": "s6q9",
+      "type": "single",
+      "prompt": "What is the function of a proxy server?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q9-1",
+          "text": "To act as an intermediary for requests from clients seeking resources from other servers",
+          "correct": true
+        },
+        {
+          "id": "s6q9-2",
+          "text": "To route traffic",
+          "correct": false
+        },
+        {
+          "id": "s6q9-3",
+          "text": "To provide secure access",
+          "correct": false
+        },
+        {
+          "id": "s6q9-4",
+          "text": "To monitor performance",
+          "correct": false
+        }
+      ],
+      "explanation": "A proxy is an intermediary that forwards client requests to other servers.\n\nReferences:\nAnswer reference: https://www.rfc-editor.org/rfc/rfc9110.html#section-3.7"
+    },
+    {
+      "id": "s6q10",
+      "type": "single",
+      "prompt": "Which cable type is immune to electromagnetic interference?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q10-1",
+          "text": "STP",
+          "correct": false
+        },
+        {
+          "id": "s6q10-2",
+          "text": "UTP",
+          "correct": false
+        },
+        {
+          "id": "s6q10-3",
+          "text": "Fiber optic",
+          "correct": true
+        },
+        {
+          "id": "s6q10-4",
+          "text": "Coaxial",
+          "correct": false
+        }
+      ],
+      "explanation": "Optical fiber carries light rather than electrical signals, making the fiber transmission medium immune to electromagnetic interference.\n\nReferences:\nAnswer reference: https://www.cisco.com/c/en/us/td/docs/sanity/suman/CPwE-Physical-Infrastructure_Feb2023.html"
+    },
+    {
+      "id": "s6q11",
+      "type": "single",
+      "prompt": "Which port number is used by HTTPS?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q11-1",
+          "text": "80",
+          "correct": false
+        },
+        {
+          "id": "s6q11-2",
+          "text": "443",
+          "correct": true
+        },
+        {
+          "id": "s6q11-3",
+          "text": "22",
+          "correct": false
+        },
+        {
+          "id": "s6q11-4",
+          "text": "21",
+          "correct": false
+        }
+      ],
+      "explanation": "The registered default port for HTTPS is 443.\n\nReferences:\nAnswer reference: https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=https"
+    },
+    {
+      "id": "s6q12",
+      "type": "single",
+      "prompt": "What is the purpose of a VLAN?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q12-1",
+          "text": "To segment broadcast domains",
+          "correct": true
+        },
+        {
+          "id": "s6q12-2",
+          "text": "To increase bandwidth",
+          "correct": false
+        },
+        {
+          "id": "s6q12-3",
+          "text": "To provide secure access",
+          "correct": false
+        },
+        {
+          "id": "s6q12-4",
+          "text": "To route traffic between networks",
+          "correct": false
+        }
+      ],
+      "explanation": "VLANs divide a switched network into separate Layer 2 broadcast domains.\n\nReferences:\nAnswer reference: https://www.cisco.com/c/en/us/td/docs/routers/ios-xe/lan-wan/lan-wan/m_lsw-conf-rout-vlan.html"
+    },
+    {
+      "id": "s6q13",
+      "type": "single",
+      "prompt": "Which routing protocol uses a metric based on hop count?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q13-1",
+          "text": "RIP",
+          "correct": true
+        },
+        {
+          "id": "s6q13-2",
+          "text": "OSPF",
+          "correct": false
+        },
+        {
+          "id": "s6q13-3",
+          "text": "EIGRP",
+          "correct": false
+        },
+        {
+          "id": "s6q13-4",
+          "text": "BGP",
+          "correct": false
+        }
+      ],
+      "explanation": "RIP chooses routes using hop count as its metric.\n\nReferences:\nAnswer reference: https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/routing/configuration-guide/routing-config-cisco8000/implementing-rip/understanding-rip.html"
+    },
+    {
+      "id": "s6q14",
+      "type": "single",
+      "prompt": "What is the function of the Transport layer in the OSI model?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q14-1",
+          "text": "To ensure reliable data transfer",
+          "correct": true
+        },
+        {
+          "id": "s6q14-2",
+          "text": "To route packets",
+          "correct": false
+        },
+        {
+          "id": "s6q14-3",
+          "text": "To establish sessions",
+          "correct": false
+        },
+        {
+          "id": "s6q14-4",
+          "text": "To encrypt data",
+          "correct": false
+        }
+      ],
+      "explanation": "This is the best listed choice: reliable end-to-end transfer is provided by TCP at the transport layer. Not every transport protocol is reliable; UDP does not guarantee delivery.\n\nReferences:\nAnswer reference: https://www.rfc-editor.org/rfc/rfc9293.html"
+    },
+    {
+      "id": "s6q15",
+      "type": "single",
+      "prompt": "Which device operates at Layer 1 of the OSI model?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q15-1",
+          "text": "Hub",
+          "correct": true
+        },
+        {
+          "id": "s6q15-2",
+          "text": "Switch",
+          "correct": false
+        },
+        {
+          "id": "s6q15-3",
+          "text": "Router",
+          "correct": false
+        },
+        {
+          "id": "s6q15-4",
+          "text": "Firewall",
+          "correct": false
+        }
+      ],
+      "explanation": "A hub repeats physical signals and is a Layer 1 device.\n\nReferences:\nAnswer reference: https://www.cisco.com/c/en/us/support/docs/lan-switching/ethernet/12006-chapter22.html"
+    },
+    {
+      "id": "s6q16",
+      "type": "single",
+      "prompt": "What is the default subnet mask for a Class C IP address?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q16-1",
+          "text": "255.0.0.0",
+          "correct": false
+        },
+        {
+          "id": "s6q16-2",
+          "text": "255.255.0.0",
+          "correct": false
+        },
+        {
+          "id": "s6q16-3",
+          "text": "255.255.255.0",
+          "correct": true
+        },
+        {
+          "id": "s6q16-4",
+          "text": "255.255.255.255",
+          "correct": false
+        }
+      ],
+      "explanation": "In historical classful addressing, a Class C network uses a /24 mask: 255.255.255.0.\n\nReferences:\nAnswer reference: https://learn.microsoft.com/en-us/troubleshoot/windows-client/networking/tcpip-addressing-and-subnetting"
+    },
+    {
+      "id": "s6q17",
+      "type": "single",
+      "prompt": "Which IPv4 address class supports 16 million hosts?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q17-1",
+          "text": "Class A",
+          "correct": true
+        },
+        {
+          "id": "s6q17-2",
+          "text": "Class B",
+          "correct": false
+        },
+        {
+          "id": "s6q17-3",
+          "text": "Class C",
+          "correct": false
+        },
+        {
+          "id": "s6q17-4",
+          "text": "Class D",
+          "correct": false
+        }
+      ],
+      "explanation": "A historical Class A network has 24 host bits: 16,777,216 addresses, normally 16,777,214 usable host addresses.\n\nReferences:\nAnswer reference: https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html"
+    },
+    {
+      "id": "s6q18",
+      "type": "single",
+      "prompt": "Which cloud service model provides a platform for developers to build applications?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q18-1",
+          "text": "IaaS",
+          "correct": false
+        },
+        {
+          "id": "s6q18-2",
+          "text": "PaaS",
+          "correct": true
+        },
+        {
+          "id": "s6q18-3",
+          "text": "SaaS",
+          "correct": false
+        },
+        {
+          "id": "s6q18-4",
+          "text": "FaaS",
+          "correct": false
+        }
+      ],
+      "explanation": "Platform as a Service supplies a managed platform on which customers can deploy applications.\n\nReferences:\nAnswer reference: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf"
+    },
+    {
+      "id": "s6q19",
+      "type": "single",
+      "prompt": "What is the role of a hypervisor in virtualization?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q19-1",
+          "text": "To manage virtual machines",
+          "correct": true
+        },
+        {
+          "id": "s6q19-2",
+          "text": "To provide network connectivity",
+          "correct": false
+        },
+        {
+          "id": "s6q19-3",
+          "text": "To store data",
+          "correct": false
+        },
+        {
+          "id": "s6q19-4",
+          "text": "To monitor performance",
+          "correct": false
+        }
+      ],
+      "explanation": "A hypervisor creates and manages virtual machines and allocates physical resources among them.\n\nReferences:\nAnswer reference: https://www.redhat.com/en/topics/virtualization/what-is-a-hypervisor"
+    },
+    {
+      "id": "s6q20",
+      "type": "single",
+      "prompt": "Which programming language is commonly used with Cisco ACI?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q20-1",
+          "text": "Python",
+          "correct": true
+        },
+        {
+          "id": "s6q20-2",
+          "text": "Java",
+          "correct": false
+        },
+        {
+          "id": "s6q20-3",
+          "text": "C++",
+          "correct": false
+        },
+        {
+          "id": "s6q20-4",
+          "text": "Ruby",
+          "correct": false
+        }
+      ],
+      "explanation": "Cisco provides Python tooling for ACI, including the Cobra SDK and ACI Toolkit.\n\nReferences:\nAnswer reference: https://developer.cisco.com/site/aci/getting-started/"
+    },
+    {
+      "id": "s6q21",
+      "type": "single",
+      "prompt": "What does CI/CD stand for?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q21-1",
+          "text": "Continuous Integration/Continuous Deployment",
+          "correct": true
+        },
+        {
+          "id": "s6q21-2",
+          "text": "Code Integration/Code Deployment",
+          "correct": false
+        },
+        {
+          "id": "s6q21-3",
+          "text": "Continuous Iteration/Continuous Delivery",
+          "correct": false
+        },
+        {
+          "id": "s6q21-4",
+          "text": "Code Iteration/Code Delivery",
+          "correct": false
+        }
+      ],
+      "explanation": "Continuous Integration/Continuous Deployment is the valid expansion among these options. CD can also mean Continuous Delivery, which is a related but different practice.\n\nReferences:\nAnswer reference: https://www.redhat.com/en/topics/devops/what-is-ci-cd"
+    },
+    {
+      "id": "s6q22",
+      "type": "single",
+      "prompt": "Which tool is commonly used for container orchestration?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q22-1",
+          "text": "Docker",
+          "correct": false
+        },
+        {
+          "id": "s6q22-2",
+          "text": "Kubernetes",
+          "correct": true
+        },
+        {
+          "id": "s6q22-3",
+          "text": "Ansible",
+          "correct": false
+        },
+        {
+          "id": "s6q22-4",
+          "text": "Terraform",
+          "correct": false
+        }
+      ],
+      "explanation": "Kubernetes orchestrates deployment, scaling, and management of containerized applications.\n\nReferences:\nAnswer reference: https://kubernetes.io/docs/home/"
+    },
+    {
+      "id": "s6q23",
+      "type": "single",
+      "prompt": "What is the main purpose of OAuth 2.0?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q23-1",
+          "text": "Authentication",
+          "correct": false
+        },
+        {
+          "id": "s6q23-2",
+          "text": "Authorization",
+          "correct": true
+        },
+        {
+          "id": "s6q23-3",
+          "text": "Encryption",
+          "correct": false
+        },
+        {
+          "id": "s6q23-4",
+          "text": "Data validation",
+          "correct": false
+        }
+      ],
+      "explanation": "OAuth 2.0 is an authorization framework. Authentication is a different function; OpenID Connect adds an identity layer.\n\nReferences:\nAnswer reference: https://www.rfc-editor.org/rfc/rfc6749.html"
+    },
+    {
+      "id": "s6q24",
+      "type": "single",
+      "prompt": "Which of the following is an example of a synchronous communication pattern?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q24-1",
+          "text": "Message queue",
+          "correct": false
+        },
+        {
+          "id": "s6q24-2",
+          "text": "Event-driven architecture",
+          "correct": false
+        },
+        {
+          "id": "s6q24-3",
+          "text": "Request-response",
+          "correct": true
+        },
+        {
+          "id": "s6q24-4",
+          "text": "Pub/sub",
+          "correct": false
+        }
+      ],
+      "explanation": "A synchronous request-response interaction makes the caller wait for the service response. Request-response can also be implemented asynchronously, but it is the best listed choice here.\n\nReferences:\nAnswer reference: https://learn.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/communication-in-microservice-architecture"
+    },
+    {
+      "id": "s6q25",
+      "type": "single",
+      "prompt": "In a REST API, which HTTP method is typically used to update an existing resource?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q25-1",
+          "text": "GET",
+          "correct": false
+        },
+        {
+          "id": "s6q25-2",
+          "text": "POST",
+          "correct": false
+        },
+        {
+          "id": "s6q25-3",
+          "text": "PUT",
+          "correct": true
+        },
+        {
+          "id": "s6q25-4",
+          "text": "DELETE",
+          "correct": false
+        }
+      ],
+      "explanation": "PUT creates or replaces the state of the target resource. It is the appropriate update method among the supplied choices; PATCH commonly handles partial updates.\n\nReferences:\nAnswer reference: https://www.rfc-editor.org/rfc/rfc9110.html#section-9.3.4"
+    },
+    {
+      "id": "s6q26",
+      "type": "single",
+      "prompt": "What is the primary function of a reverse proxy?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q26-1",
+          "text": "To intercept requests from clients and forward them to the appropriate server",
+          "correct": true
+        },
+        {
+          "id": "s6q26-2",
+          "text": "To provide secure access to internal resources",
+          "correct": false
+        },
+        {
+          "id": "s6q26-3",
+          "text": "To load balance traffic across multiple servers",
+          "correct": false
+        },
+        {
+          "id": "s6q26-4",
+          "text": "All of the above",
+          "correct": false
+        }
+      ],
+      "explanation": "The core function is to receive client requests and forward them to backend servers. Security controls and load balancing are common additional capabilities, so \"All of the above\" is also plausible if the question is asking about capabilities. Because \"primary function\" makes the options ambiguous, this item is shown for review but excluded from scoring.\n\nReferences:\nAnswer reference: https://httpd.apache.org/docs/2.4/en/howto/reverse_proxy.html",
+      "unscored": true
+    },
+    {
+      "id": "s6q27",
+      "type": "single",
+      "prompt": "The Cisco DNA Center platform uses what type of API?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q27-1",
+          "text": "REST",
+          "correct": true
+        },
+        {
+          "id": "s6q27-2",
+          "text": "SOAP",
+          "correct": false
+        },
+        {
+          "id": "s6q27-3",
+          "text": "NETCONF",
+          "correct": false
+        },
+        {
+          "id": "s6q27-4",
+          "text": "RESTCONF",
+          "correct": false
+        }
+      ],
+      "explanation": "Cisco DNA Center exposes REST APIs, including its Intent APIs.\n\nReferences:\nAnswer reference: https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/startnow-dnac-sdk/"
+    },
+    {
+      "id": "s6q28",
+      "type": "single",
+      "prompt": "What does XML stand for?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q28-1",
+          "text": "eXtensible Markup Language",
+          "correct": true
+        },
+        {
+          "id": "s6q28-2",
+          "text": "eXecutable Multiple Language",
+          "correct": false
+        },
+        {
+          "id": "s6q28-3",
+          "text": "eXtra Modern Language",
+          "correct": false
+        },
+        {
+          "id": "s6q28-4",
+          "text": "eXamine Multiple Language",
+          "correct": false
+        }
+      ],
+      "explanation": "XML stands for Extensible Markup Language. The capitalization in the supplied choice does not change that expansion.\n\nReferences:\nAnswer reference: https://www.w3.org/TR/xml/"
+    },
+    {
+      "id": "s6q29",
+      "type": "single",
+      "prompt": "What does Yang stand for?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "s6q29-1",
+          "text": "Yet Another Next Generation",
+          "correct": true
+        },
+        {
+          "id": "s6q29-2",
+          "text": "Yet Another Network Generation",
+          "correct": false
+        },
+        {
+          "id": "s6q29-3",
+          "text": "Yet Another Name Generation",
+          "correct": false
+        },
+        {
+          "id": "s6q29-4",
+          "text": "Yet Another Node Generation",
+          "correct": false
+        }
+      ],
+      "explanation": "Cisco expands YANG as Yet Another Next Generation.\n\nReferences:\nAnswer reference: https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/prog/configuration/26x/26x-programmability-cg/netconf_protocol.html"
+    }
+  ]
+}

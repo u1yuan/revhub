@@ -58,6 +58,24 @@
           "topic": "Every unique question from Module 5, Module 6, and FA 6",
           "questionCount": 46,
           "examTimerMinutes": 60
+        },
+        {
+          "id": "sa4-mock-exam-set-a",
+          "bankId": "devnet-sa4-mock-exam-set-a",
+          "title": "SA4 Mock Exam Set A",
+          "examLabel": null,
+          "topic": "SA4 · Infrastructure, automation, Cisco platforms, and development",
+          "questionCount": 79,
+          "examTimerMinutes": 60
+        },
+        {
+          "id": "sa4-mock-exam-set-b",
+          "bankId": "devnet-sa4-mock-exam-set-b",
+          "title": "SA4 Mock Exam Set B",
+          "examLabel": null,
+          "topic": "DevNet Associate Modules 7–8",
+          "questionCount": 52,
+          "examTimerMinutes": 60
         }
       ]
     },

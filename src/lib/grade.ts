@@ -40,6 +40,7 @@ export function matchResults(question: MatchingQuestion, answer: Answer | null |
 
 /** Grade one answer. Invalid or missing answers are always incorrect. */
 export function gradeAnswer(question: Question, answer: Answer | null | undefined): boolean {
+  if (question.unscored) return false;
   if (!answer || !isAnswerValid(question, answer)) return false;
   if (question.type === "fill") {
     if (answer.kind !== "fill") return false;
@@ -84,8 +85,9 @@ export function scoreAttempt(
   questions: Question[],
   answers: Record<string, Answer | undefined>,
 ): { correct: number; total: number; percent: number } {
-  const total = questions.length;
-  const correct = questions.filter((q) => gradeAnswer(q, answers[q.id])).length;
+  const scored = questions.filter((q) => !q.unscored);
+  const total = scored.length;
+  const correct = scored.filter((q) => gradeAnswer(q, answers[q.id])).length;
   const percent = total === 0 ? 0 : Math.round((correct / total) * 1000) / 10;
   return { correct, total, percent };
 }

@@ -24,6 +24,8 @@ interface BaseQuestion {
   exhibits?: Exhibit[];
   /** Monospace block shown under the prompt (one entry per line). */
   code?: string[];
+  /** Displayed and answered normally, but omitted from scores. */
+  unscored?: boolean;
 }
 
 export interface ChoiceQuestion extends BaseQuestion {
