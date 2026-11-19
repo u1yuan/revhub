@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState, type FormEvent, type KeyboardEvent } from "react";
 import type { Answer, ChoiceQuestion, MatchingQuestion, Question, QuestionBank } from "@/lib/types";
-import { formatClock, type Attempt } from "@/lib/attempt";
+import { attemptQuestions, formatClock, type Attempt } from "@/lib/attempt";
 import { answerTexts, correctAnswerTexts, gradeAnswer, isAnswerValid, matchResults } from "@/lib/grade";
 import StatusBar from "./StatusBar";
 import QuestionIndex, { ProgressLine } from "./QuestionIndex";
@@ -26,7 +26,7 @@ export default function QuestionView({ bank, attempt, question, remaining, notic
   const locked: Answer | undefined = attempt.answers[question.id];
   const isLocked = locked !== undefined;
   const prep = attempt.mode === "prep";
-  const total = bank.questions.length;
+  const total = attemptQuestions(bank, attempt).length;
   const isLast = attempt.index === total - 1;
 
   const [picked, setPicked] = useState<string[]>([]);
@@ -111,7 +111,7 @@ export default function QuestionView({ bank, attempt, question, remaining, notic
           <div className="qcard__head">
             <div>
               <p className="qcard__count">
-                Question {question.number} of {total}
+                Question {attempt.index + 1} of {total}{attempt.v === 3 ? ` · Original question ${question.number}` : ""}
               </p>
               <p className="qcard__meta">
                 {bank.title} · 1 pt · locked after submit

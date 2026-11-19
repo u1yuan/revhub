@@ -229,7 +229,7 @@ screenshots are disposable and are never included in `out/`.
   question N." No colours or right/wrong anywhere until the results screen.
 - **Results (both modes):** score X/N and percentage, then a read-only review
   of every question with explanations. "Start a new attempt" clears the run.
-  Filter the read-only review by All, Incorrect, or Correct. No "retake missed". The historical QuizFetch 17/20 score never appears.
+  Filter the read-only review by All, Incorrect, Correct, or Unscored. **Retry incorrect questions** starts a new untimed Prep attempt containing only the missed scored questions (including unanswered questions from a timed-out Exam), in their original order. A retry replaces the current result for that assessment in this tab and can itself be retried. The historical QuizFetch 17/20 score never appears.
 - **Back button:** trapped during an attempt; you stay on the current question
   and see "Answers are locked." The header has no links mid-attempt — leaving
   needs **Discard attempt** (with a confirm), which returns to mode select.
@@ -269,6 +269,7 @@ screenshots are disposable and are never included in `out/`.
   that doesn't match the assessment.
 - Only locked answers survive a refresh; an unsubmitted pick is lost. Closing
   the tab ends every attempt in it.
+- Incorrect-answer retries save their selected source question IDs with the attempt; refresh restores the subset and its progress.
 
 ## Project layout
 
@@ -353,3 +354,7 @@ destination; it must be a lowercase alphanumeric slug separated by hyphens.
 The browser walkthrough also checks all three CS0075 routes, independent saved
 attempts, Prep feedback and source references, locked answers and refresh restoration, Exam countdown and hidden
 feedback, results, and code excerpts at desktop and 360px widths.
+
+To check the missed-question retry in a local browser, start the app with
+`npm run dev`, then run `node scripts/e2e-incorrect-retry.cjs`. The walkthrough
+checks the result button, subset order, refresh restoration, and retry score.

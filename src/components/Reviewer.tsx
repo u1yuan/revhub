@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Answer, Mode, QuestionBank } from "@/lib/types";
 import {
-  advance, expireIfDue, lockAnswer, loadAttempt, newAttempt, remainingMs, saveAttempt, type Attempt,
+  advance, attemptQuestions, expireIfDue, lockAnswer, loadAttempt, newAttempt, newIncorrectAttempt, remainingMs, saveAttempt, type Attempt,
 } from "@/lib/attempt";
 import StartScreen from "./StartScreen";
 import QuestionView from "./QuestionView";
@@ -112,10 +112,16 @@ export default function Reviewer({ bank }: { bank: QuestionBank }) {
   }
 
   if (attempt.finished) {
-    return <Results bank={bank} attempt={attempt} onRestart={() => update(null)} />;
+    return <Results bank={bank} attempt={attempt} onRestart={() => update(null)} onRetryIncorrect={() => {
+      const retry = newIncorrectAttempt(bank, attempt);
+      if (retry) {
+        setNow(retry.startedAt);
+        update(retry);
+      }
+    }} />;
   }
 
-  const question = bank.questions[attempt.index]!;
+  const question = attemptQuestions(bank, attempt)[attempt.index]!;
   return (
     <QuestionView
       key={question.id}

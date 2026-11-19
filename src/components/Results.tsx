@@ -3,21 +3,24 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import type { QuestionBank } from "@/lib/types";
-import { formatClock, timeUsedMs, timerMs, type Attempt } from "@/lib/attempt";
+import { attemptQuestions, formatClock, timeUsedMs, timerMs, type Attempt } from "@/lib/attempt";
 import { gradeAnswer, scoreAttempt } from "@/lib/grade";
 import StatusBar from "./StatusBar";
 import { feedbackLines } from "./QuestionView";
 
-export default function Results({ bank, attempt, onRestart }: { bank: QuestionBank; attempt: Attempt; onRestart: () => void }) {
-  const { correct, total, percent } = scoreAttempt(bank.questions, attempt.answers);
+export default function Results({ bank, attempt, onRestart, onRetryIncorrect }: { bank: QuestionBank; attempt: Attempt; onRestart: () => void; onRetryIncorrect: () => void }) {
+  const attemptedQuestions = attemptQuestions(bank, attempt);
+  const { correct, total, percent } = scoreAttempt(attemptedQuestions, attempt.answers);
   const [filter, setFilter] = useState<"all" | "incorrect" | "correct" | "unscored">("all");
   const reviewRef = useRef<HTMLHeadingElement>(null);
-  const questions = bank.questions.filter((q) => filter === "all" || (filter === "unscored" ? q.unscored : !q.unscored && gradeAnswer(q, attempt.answers[q.id]) === (filter === "correct")));
+  const questions = attemptedQuestions.filter((q) => filter === "all" || (filter === "unscored" ? q.unscored : !q.unscored && gradeAnswer(q, attempt.answers[q.id]) === (filter === "correct")));
   const headRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => headRef.current?.focus({ preventScroll: true }), []);
   const courseHref = `/courses/${bank.courseId}`;
   const limit = timerMs(bank, attempt.mode);
-  const unanswered = bank.questions.filter((q) => !(q.id in attempt.answers)).length;
+  const unanswered = attemptedQuestions.filter((q) => !(q.id in attempt.answers)).length;
+  const incorrect = total - correct;
+  const retryButton = incorrect > 0 && <button type="button" className="btn btn--primary" onClick={onRetryIncorrect}>Retry {incorrect} incorrect question{incorrect === 1 ? "" : "s"}</button>;
 
   return (
     <div className="page">
@@ -34,7 +37,7 @@ export default function Results({ bank, attempt, onRestart }: { bank: QuestionBa
           </h1>
           <p className="score__pct">{percent}%</p>
           <p className="score__line">
-            {bank.title} · {attempt.mode}
+            {bank.title} · {attempt.mode}{attempt.v === 3 ? " · incorrect-answer retry" : ""}
             {limit !== null && <> · {formatClock(timeUsedMs(bank, attempt))} used of {formatClock(limit)}</>}
           </p>
           {attempt.timedOut && (
@@ -45,6 +48,7 @@ export default function Results({ bank, attempt, onRestart }: { bank: QuestionBa
         </section>
 
         <div className="results-actions">
+          {retryButton}
           {correct < total && <button type="button" className="btn btn--outline" onClick={() => { setFilter("incorrect"); reviewRef.current?.focus(); }}>Review incorrect answers</button>}
           <button type="button" className="btn btn--primary btn--wide" onClick={onRestart}>
             Start a new attempt
@@ -56,10 +60,10 @@ export default function Results({ bank, attempt, onRestart }: { bank: QuestionBa
 
         <section aria-labelledby="review-head" className="panel review">
           <h2 id="review-head" className="panel__head" ref={reviewRef} tabIndex={-1}>
-            Review · {total} questions
+            Review · {attemptedQuestions.length} questions
           </h2>
           <div className="filters" role="group" aria-label="Filter answer review">
-            {(["all", "incorrect", "correct", "unscored"] as const).map((value) => <button key={value} type="button" className="filter-btn" aria-pressed={filter === value} onClick={() => setFilter(value)}>{value === "all" ? "All" : value === "incorrect" ? "Incorrect" : value === "correct" ? "Correct" : "Unscored"} ({value === "all" ? bank.questions.length : value === "correct" ? correct : value === "unscored" ? bank.questions.filter((q) => q.unscored).length : total - correct})</button>)}
+            {(["all", "incorrect", "correct", "unscored"] as const).map((value) => <button key={value} type="button" className="filter-btn" aria-pressed={filter === value} onClick={() => setFilter(value)}>{value === "all" ? "All" : value === "incorrect" ? "Incorrect" : value === "correct" ? "Correct" : "Unscored"} ({value === "all" ? attemptedQuestions.length : value === "correct" ? correct : value === "unscored" ? attemptedQuestions.filter((q) => q.unscored).length : incorrect})</button>)}
           </div>
           <p className="review-count" role="status">{questions.length} questions shown</p>
           {questions.length === 0 && <p className="review-count">No {filter} answers. <button type="button" className="link-btn" onClick={() => setFilter("all")}>Show all answers</button></p>}
@@ -96,6 +100,7 @@ export default function Results({ bank, attempt, onRestart }: { bank: QuestionBa
         </section>
 
         <div className="results-actions">
+          {retryButton}
           {correct < total && <button type="button" className="btn btn--outline" onClick={() => { setFilter("incorrect"); reviewRef.current?.focus(); }}>Review incorrect answers</button>}
           <button type="button" className="btn btn--primary btn--wide" onClick={onRestart}>
             Start a new attempt

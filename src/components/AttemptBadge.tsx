@@ -10,7 +10,7 @@ export default function AttemptBadge({ bankId, total }: { bankId: string; total:
   if (!status) return null;
   return (
     <span className={`badge ${status.finished ? "badge--done" : "badge--live"}`}>
-      {status.finished ? `${status.mode} · results ready` : `${status.mode} in progress · question ${status.index + 1} of ${total}`}
+      {status.finished ? `${status.mode}${status.questionCount ? " retry" : ""} · results ready` : `${status.mode}${status.questionCount ? " retry" : ""} in progress · question ${status.index + 1} of ${status.questionCount ?? total}`}
     </span>
   );
 }

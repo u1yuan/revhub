@@ -1,7 +1,7 @@
 import { test, beforeEach } from "node:test";
 import assert from "node:assert/strict";
 import {
-  advance, expireIfDue, formatClock, loadAttempt, lockAnswer, newAttempt, peekStatus, remainingMs, saveAttempt, storageKey, timeUsedMs, validateAttempt,
+  advance, attemptQuestions, expireIfDue, formatClock, loadAttempt, lockAnswer, newAttempt, newIncorrectAttempt, peekStatus, remainingMs, saveAttempt, storageKey, timeUsedMs, validateAttempt,
 } from "../src/lib/attempt.ts";
 import type { Answer, ChoiceQuestion } from "../src/lib/types.ts";
 import { bankFor } from "./helpers.ts";
@@ -144,4 +144,61 @@ test("normal finish: advance past the last question", () => {
   assert.equal(done.index, m5.questions.length - 1);
   saveAttempt(m5.id, done);
   assert.deepEqual(loadAttempt(m5), done);
+});
+
+test("retry contains only missed questions in source order and resumes after refresh", () => {
+  let original = newAttempt(m5, "exam", T0);
+  const missed = [0, 8];
+  for (let i = 0; i < m5.questions.length; i++) {
+    const q = m5.questions[i]!;
+    let answer = right(i);
+    if (missed.includes(i)) {
+      answer = q.type === "matching"
+        ? { kind: "match", picks: Object.fromEntries(q.prompts.map((p, j) => [p.id, j === 0 ? q.options.find((o) => o !== p.answer)! : p.answer])) }
+        : { kind: "choice", choiceIds: [(q as ChoiceQuestion).choices.find((c) => !c.correct)!.id] };
+    }
+    original = advance(m5, lockAnswer(m5, original, answer), T0 + 1000);
+  }
+  const retry = newIncorrectAttempt(m5, original, T0 + 2000)!;
+  assert.equal(retry.mode, "prep");
+  assert.equal(retry.endsAt, null);
+  assert.deepEqual(retry.questionIds, missed.map((i) => m5.questions[i]!.id));
+  assert.deepEqual(attemptQuestions(m5, retry).map((q) => q.number), missed.map((i) => i + 1));
+  saveAttempt(m5.id, retry);
+  assert.deepEqual(loadAttempt(m5), retry);
+  assert.deepEqual(peekStatus(m5.id), { mode: "prep", index: 0, finished: false, questionCount: 2 });
+  const first = advance(m5, lockAnswer(m5, retry, right(0)), T0 + 3000);
+  assert.equal(first.index, 1);
+  assert.ok(first.answers[m5.questions[0]!.id]);
+  assert.equal(first.answers[m5.questions[1]!.id], undefined);
+  saveAttempt(m5.id, first);
+  assert.deepEqual(loadAttempt(m5), first);
+  const done = advance(m5, lockAnswer(m5, first, right(8)), T0 + 4000);
+  assert.equal(done.finished, true);
+  assert.deepEqual(loadAttempt(m5), first);
+  saveAttempt(m5.id, done);
+  assert.deepEqual(loadAttempt(m5), done);
+  assert.equal(newIncorrectAttempt(m5, done), null);
+});
+
+test("retry includes unanswered timed-out questions but excludes unscored questions", () => {
+  const expired = expireIfDue(m5, play(m5, 2), T0 + HOUR);
+  const retry = newIncorrectAttempt(m5, expired)!;
+  assert.deepEqual(retry.questionIds, m5.questions.slice(2).filter((q) => !q.unscored).map((q) => q.id));
+  assert.equal(newIncorrectAttempt(m5, newAttempt(m5, "prep", T0)), null);
+
+  const sa4 = bankFor("devnet", "sa4-mock-exam-set-a");
+  assert.ok(sa4.questions.some((q) => q.unscored));
+  const perfect = play(sa4, sa4.questions.length, newAttempt(sa4, "prep", T0));
+  assert.equal(newIncorrectAttempt(sa4, perfect), null);
+});
+
+test("retry restore rejects altered selection, answer gaps, and answers outside selection", () => {
+  const original = expireIfDue(m5, play(m5, 2), T0 + HOUR);
+  const retry = newIncorrectAttempt(m5, original)!;
+  const reversed = [...retry.questionIds!].reverse();
+  assert.equal(validateAttempt(m5, { ...retry, questionIds: reversed }), null);
+  assert.equal(validateAttempt(m5, { ...retry, questionIds: ["not-a-question"] }), null);
+  assert.equal(validateAttempt(m5, { ...retry, questionIds: [m5.questions[1]!.id, m5.questions[2]!.id], answers: { [m5.questions[0]!.id]: right(0) } }), null);
+  assert.equal(validateAttempt(m5, { ...retry, index: 2 }), null);
 });
