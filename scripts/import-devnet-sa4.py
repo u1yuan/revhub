@@ -14,6 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_HTML = ROOT / "public/reviewers/devnet-sa4-reviewer.html"
 DEFAULT_JSON = ROOT / "public/reviewers/devasc-m7-m8-question-bank.json"
+DEFAULT_SET_B_ADDITIONS = ROOT / "data/sources/devnet-sa4-set-b-additions.json"
 EXHIBIT_MAP = {"m7-exam-12": "s1q12", "m8-exam-06": "s2q6", "m8-quiz-08": "s4q8"}
 
 
@@ -34,7 +35,7 @@ def image_size(data):
     raise ValueError("Unsupported exhibit image")
 
 
-def build(html_path, json_path):
+def build(html_path, json_path, set_b_additions_path):
     html = html_path.read_text(encoding="utf-8-sig")
     match = re.search(r'<script id="quiz-data"[^>]*>(.*?)</script>', html, re.S)
     if not match:
@@ -61,9 +62,14 @@ def build(html_path, json_path):
     html_by_id = {q["id"]: q for b in sections for q in b["questions"]}
     raw_b = json_path.read_text(encoding="utf-8-sig")
     source_b = [q for q in json.loads(raw_b)["items"] if q["type"] == "mcq"]
+    additions = json.loads(set_b_additions_path.read_text(encoding="utf-8-sig"))["items"]
+    if len(additions) != 12:
+        raise ValueError(f"Expected 12 authored Set B additions, found {len(additions)}")
+    if any(q.get("type") != "mcq" or len(q.get("correct_answers", [])) != 1 for q in additions):
+        raise ValueError("Set B additions must be single-answer MCQs")
     out_b = []
     exhibits = {}
-    for q in source_b:
+    for q in [*source_b, *additions]:
         qid = q["id"]
         item = {"id": qid, "type": "single", "prompt": q["question"], "instruction": "Select one answer.", "choices": [{"id": f"{qid}-{i + 1}", "text": text, "correct": text in q["correct_answers"]} for i, text in enumerate(q["choices"])], "explanation": q["explanation"]}
         if len(q["correct_answers"]) > 1:
@@ -83,8 +89,8 @@ def build(html_path, json_path):
             w, h = image_size(data)
             item["exhibits"] = [{"src": f"/exhibits/{name}", "alt": f"Exhibit for {q['question']}", "width": w, "height": h}]
         out_b.append(item)
-    if len(out_b) != 52:
-        raise ValueError(f"Expected 52 MCQs, found {len(out_b)}")
+    if len(out_b) != 64:
+        raise ValueError(f"Expected 64 MCQs, found {len(out_b)}")
     return {"devnet-sa4-mock-exam-set-a": {"id": "devnet-sa4-mock-exam-set-a", "questions": out_a}, "devnet-sa4-mock-exam-set-b": {"id": "devnet-sa4-mock-exam-set-b", "questions": out_b}}, exhibits
 
 
@@ -92,9 +98,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--html", type=Path, default=DEFAULT_HTML)
     parser.add_argument("--json", type=Path, default=DEFAULT_JSON)
+    parser.add_argument("--set-b-additions", type=Path, default=DEFAULT_SET_B_ADDITIONS)
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
-    banks, exhibits = build(args.html, args.json)
+    banks, exhibits = build(args.html, args.json, args.set_b_additions)
     for bank_id, bank in banks.items():
         path = ROOT / "data/assessments" / f"{bank_id}.json"
         rendered = json.dumps(bank, ensure_ascii=False, indent=2) + "\n"
@@ -111,7 +118,7 @@ def main():
         else:
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(data)
-    print("Verified" if args.check else "Imported", "79 Set A and 52 Set B questions; 3 exhibits.")
+    print("Verified" if args.check else "Imported", "79 Set A and 64 Set B questions; 3 exhibits.")
 
 
 if __name__ == "__main__":

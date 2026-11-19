@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "title": "DevNet SA4 Set B authored additions",
+    "note": "Twelve new single-answer questions authored from the answer topics in the implementation plan. The supplied question-bank JSON does not contain the class-export stems or choices.",
+    "source_question_numbers": [16, 19, 20, 21, 23, 24, 27, 30, 31, 33, 35, 38]
+  },
+  "items": [
+    {
+      "id": "sa4-class-16",
+      "type": "mcq",
+      "question": "Which Cisco tool provides a PowerShell interface for managing Cisco UCS infrastructure?",
+      "choices": ["UCS PowerTool", "UCS Manager", "Cisco IMC Supervisor", "Cisco Intersight"],
+      "correct_answers": ["UCS PowerTool"],
+      "explanation": "UCS PowerTool provides PowerShell cmdlets for automating Cisco UCS management."
+    },
+    {
+      "id": "sa4-class-19",
+      "type": "mcq",
+      "question": "Which capability is most directly associated with Cisco Webex?",
+      "choices": ["Messaging and meetings", "Data center switching", "Threat investigation", "UCS server provisioning"],
+      "correct_answers": ["Messaging and meetings"],
+      "explanation": "Cisco Webex provides collaboration capabilities for messaging and meetings.",
+      "sources": ["https://developer.cisco.com/webex/"]
+    },
+    {
+      "id": "sa4-class-20",
+      "type": "mcq",
+      "question": "Which Cisco Catalyst Center API category lets applications automate network operations using higher-level network intents?",
+      "choices": ["Intent API", "Event API", "Inventory API", "Command Runner API"],
+      "correct_answers": ["Intent API"],
+      "explanation": "Catalyst Center Intent APIs provide programmatic access to network tasks organized around operational intent.",
+      "sources": ["https://developer.cisco.com/docs/catalyst-center/"]
+    },
+    {
+      "id": "sa4-class-21",
+      "type": "mcq",
+      "question": "Which API can developers use to control and integrate with Cisco collaboration room and desk devices?",
+      "choices": ["xAPI", "Meraki Dashboard API", "Catalyst Center Intent API", "UCS Manager API"],
+      "correct_answers": ["xAPI"],
+      "explanation": "Cisco collaboration endpoints expose xAPI for device control, configuration, and integrations.",
+      "sources": ["https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/awesome-xapi/"]
+    },
+    {
+      "id": "sa4-class-23",
+      "type": "mcq",
+      "question": "Which Ansible components provide reusable operations that playbooks invoke on managed hosts?",
+      "choices": ["Ansible modules", "Inventory groups", "Jinja templates", "Configuration backups"],
+      "correct_answers": ["Ansible modules"],
+      "explanation": "Ansible modules perform discrete tasks on managed hosts and are invoked by playbooks."
+    },
+    {
+      "id": "sa4-class-24",
+      "type": "mcq",
+      "question": "Which Cisco API provides capabilities for managing and integrating with Webex room devices?",
+      "choices": ["Webex Devices", "Meraki Dashboard", "Umbrella Investigate", "UCS PowerTool"],
+      "correct_answers": ["Webex Devices"],
+      "explanation": "The Webex Devices API supports integrations with Webex collaboration devices."
+    },
+    {
+      "id": "sa4-class-27",
+      "type": "mcq",
+      "question": "Which Cisco platform provides cloud-managed networking for access points and switches?",
+      "choices": ["Meraki", "UCS Manager", "Cisco ISE", "Catalyst Center"],
+      "correct_answers": ["Meraki"],
+      "explanation": "Cisco Meraki provides cloud-based management for networking devices.",
+      "sources": ["https://meraki.cisco.com/lib/pdf/meraki_datasheet_cloud_management.pdf"]
+    },
+    {
+      "id": "sa4-class-30",
+      "type": "mcq",
+      "question": "Which environments are common fits for Cisco Meraki deployments?",
+      "choices": ["Retail and conference deployments", "Carrier core routing and long-haul transport", "Mainframe operating-system management", "Bare-metal hypervisor development"],
+      "correct_answers": ["Retail and conference deployments"],
+      "explanation": "Cloud-managed Meraki networks are commonly used across distributed retail sites and conference environments."
+    },
+    {
+      "id": "sa4-class-31",
+      "type": "mcq",
+      "question": "Which Cisco Umbrella API is intended for investigating domain and IP reputation data?",
+      "choices": ["Investigate API", "Enforcement API", "Reporting API", "Meraki Dashboard API"],
+      "correct_answers": ["Investigate API"],
+      "explanation": "The Umbrella Investigate API provides investigation data for domains, IP addresses, and related indicators.",
+      "sources": ["https://developer.cisco.com/docs/cloud-security/umbrella-api-reference-investigate-overview/"]
+    },
+    {
+      "id": "sa4-class-33",
+      "type": "mcq",
+      "question": "Which feature lets developers customize the user interface on Cisco collaboration devices?",
+      "choices": ["UI Extensions", "xAPI", "Meraki templates", "Catalyst Center Intent API"],
+      "correct_answers": ["UI Extensions"],
+      "explanation": "UI Extensions let developers add custom controls and experiences to supported collaboration device interfaces.",
+      "sources": ["https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/roomdevices-macros-samples"]
+    },
+    {
+      "id": "sa4-class-35",
+      "type": "mcq",
+      "question": "Which data modeling language defines structured configuration and state data for network devices?",
+      "choices": ["YANG", "XML", "JSON", "YAML"],
+      "correct_answers": ["YANG"],
+      "explanation": "YANG is a data modeling language for representing configuration and state data used with network management protocols."
+    },
+    {
+      "id": "sa4-class-38",
+      "type": "mcq",
+      "question": "Which message format is commonly associated with SOAP web services?",
+      "choices": ["SOAP/XML", "REST/JSON", "NETCONF/YANG", "gRPC/Protocol Buffers"],
+      "correct_answers": ["SOAP/XML"],
+      "explanation": "SOAP messages are XML-based and follow the SOAP envelope structure."
+    }
+  ]
+}

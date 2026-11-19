@@ -79,12 +79,17 @@ and imports the two summative sections (50 original and 29 additional
 questions) from `public/reviewers/devnet-sa4-reviewer.html`, in source order.
 Its two explicitly unscored questions remain available for review and do not
 affect its 77-point score. SA4 Mock Exam Set B is at
-`/courses/devnet/sa4-mock-exam-set-b/`; it imports the 52 multiple-choice
-items from `public/reviewers/devasc-m7-m8-question-bank.json`. The 35 flashcards
-are archived in the original source and excluded from this exam. Three exhibit
-images are extracted from the HTML source, including the image absent from the
-JSON record for the Module 8 quiz item. Both use the shared 60-minute Exam and
-untimed Prep flow with separate saved attempts.
+`/courses/devnet/sa4-mock-exam-set-b/` and contains 64 questions: the original
+52 multiple-choice items from `public/reviewers/devasc-m7-m8-question-bank.json`
+followed by 12 authored single-answer additions in
+`data/sources/devnet-sa4-set-b-additions.json`. The supplied JSON has 35
+flashcards, which remain archived in the original source and are excluded from
+the exam. The additions use the answer topics and references in the plan; their
+stems and distractors were authored because the supplied JSON did not include
+the referenced class-export questions. Three exhibit images are extracted from
+the HTML source, including the image absent from the JSON record for the Module
+8 quiz item. Both sets use the shared 60-minute Exam and untimed Prep flow with
+separate saved attempts.
 
 Re-import or check the generated assessment data and exhibits with:
 
@@ -92,6 +97,10 @@ Re-import or check the generated assessment data and exhibits with:
 python scripts/import-devnet-sa4.py
 python scripts/import-devnet-sa4.py --check
 ```
+
+The importer reads the authored Set B additions from
+`data/sources/devnet-sa4-set-b-additions.json`; pass `--set-b-additions <path>`
+to use a different additions file.
 
 ## Routes
 

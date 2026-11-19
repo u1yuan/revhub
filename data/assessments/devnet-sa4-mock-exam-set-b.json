@@ -1623,6 +1623,354 @@
         }
       ],
       "explanation": "The Firepower Threat Defense API Explorer is accessed via the URL address of the device itself (Firewall Device Manager / API Explorer on the device).\n\nReferences:\nhttps://itexamanswers.net/8-8-4-module-8-cisco-platforms-and-development-quiz-answers.html\nhttps://itexamanswers.net/exam-item/where-can-a-corporate-developer-access-the-api-explorer-with-the-firepower-threat-defense-api\nhttps://www.brainscape.com/flashcards/module-8-18469378/packs/22658848"
+    },
+    {
+      "id": "sa4-class-16",
+      "type": "single",
+      "prompt": "Which Cisco tool provides a PowerShell interface for managing Cisco UCS infrastructure?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "sa4-class-16-1",
+          "text": "UCS PowerTool",
+          "correct": true
+        },
+        {
+          "id": "sa4-class-16-2",
+          "text": "UCS Manager",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-16-3",
+          "text": "Cisco IMC Supervisor",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-16-4",
+          "text": "Cisco Intersight",
+          "correct": false
+        }
+      ],
+      "explanation": "UCS PowerTool provides PowerShell cmdlets for automating Cisco UCS management."
+    },
+    {
+      "id": "sa4-class-19",
+      "type": "single",
+      "prompt": "Which capability is most directly associated with Cisco Webex?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "sa4-class-19-1",
+          "text": "Messaging and meetings",
+          "correct": true
+        },
+        {
+          "id": "sa4-class-19-2",
+          "text": "Data center switching",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-19-3",
+          "text": "Threat investigation",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-19-4",
+          "text": "UCS server provisioning",
+          "correct": false
+        }
+      ],
+      "explanation": "Cisco Webex provides collaboration capabilities for messaging and meetings.\n\nReferences:\nhttps://developer.cisco.com/webex/"
+    },
+    {
+      "id": "sa4-class-20",
+      "type": "single",
+      "prompt": "Which Cisco Catalyst Center API category lets applications automate network operations using higher-level network intents?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "sa4-class-20-1",
+          "text": "Intent API",
+          "correct": true
+        },
+        {
+          "id": "sa4-class-20-2",
+          "text": "Event API",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-20-3",
+          "text": "Inventory API",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-20-4",
+          "text": "Command Runner API",
+          "correct": false
+        }
+      ],
+      "explanation": "Catalyst Center Intent APIs provide programmatic access to network tasks organized around operational intent.\n\nReferences:\nhttps://developer.cisco.com/docs/catalyst-center/"
+    },
+    {
+      "id": "sa4-class-21",
+      "type": "single",
+      "prompt": "Which API can developers use to control and integrate with Cisco collaboration room and desk devices?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "sa4-class-21-1",
+          "text": "xAPI",
+          "correct": true
+        },
+        {
+          "id": "sa4-class-21-2",
+          "text": "Meraki Dashboard API",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-21-3",
+          "text": "Catalyst Center Intent API",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-21-4",
+          "text": "UCS Manager API",
+          "correct": false
+        }
+      ],
+      "explanation": "Cisco collaboration endpoints expose xAPI for device control, configuration, and integrations.\n\nReferences:\nhttps://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/awesome-xapi/"
+    },
+    {
+      "id": "sa4-class-23",
+      "type": "single",
+      "prompt": "Which Ansible components provide reusable operations that playbooks invoke on managed hosts?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "sa4-class-23-1",
+          "text": "Ansible modules",
+          "correct": true
+        },
+        {
+          "id": "sa4-class-23-2",
+          "text": "Inventory groups",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-23-3",
+          "text": "Jinja templates",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-23-4",
+          "text": "Configuration backups",
+          "correct": false
+        }
+      ],
+      "explanation": "Ansible modules perform discrete tasks on managed hosts and are invoked by playbooks."
+    },
+    {
+      "id": "sa4-class-24",
+      "type": "single",
+      "prompt": "Which Cisco API provides capabilities for managing and integrating with Webex room devices?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "sa4-class-24-1",
+          "text": "Webex Devices",
+          "correct": true
+        },
+        {
+          "id": "sa4-class-24-2",
+          "text": "Meraki Dashboard",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-24-3",
+          "text": "Umbrella Investigate",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-24-4",
+          "text": "UCS PowerTool",
+          "correct": false
+        }
+      ],
+      "explanation": "The Webex Devices API supports integrations with Webex collaboration devices."
+    },
+    {
+      "id": "sa4-class-27",
+      "type": "single",
+      "prompt": "Which Cisco platform provides cloud-managed networking for access points and switches?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "sa4-class-27-1",
+          "text": "Meraki",
+          "correct": true
+        },
+        {
+          "id": "sa4-class-27-2",
+          "text": "UCS Manager",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-27-3",
+          "text": "Cisco ISE",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-27-4",
+          "text": "Catalyst Center",
+          "correct": false
+        }
+      ],
+      "explanation": "Cisco Meraki provides cloud-based management for networking devices.\n\nReferences:\nhttps://meraki.cisco.com/lib/pdf/meraki_datasheet_cloud_management.pdf"
+    },
+    {
+      "id": "sa4-class-30",
+      "type": "single",
+      "prompt": "Which environments are common fits for Cisco Meraki deployments?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "sa4-class-30-1",
+          "text": "Retail and conference deployments",
+          "correct": true
+        },
+        {
+          "id": "sa4-class-30-2",
+          "text": "Carrier core routing and long-haul transport",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-30-3",
+          "text": "Mainframe operating-system management",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-30-4",
+          "text": "Bare-metal hypervisor development",
+          "correct": false
+        }
+      ],
+      "explanation": "Cloud-managed Meraki networks are commonly used across distributed retail sites and conference environments."
+    },
+    {
+      "id": "sa4-class-31",
+      "type": "single",
+      "prompt": "Which Cisco Umbrella API is intended for investigating domain and IP reputation data?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "sa4-class-31-1",
+          "text": "Investigate API",
+          "correct": true
+        },
+        {
+          "id": "sa4-class-31-2",
+          "text": "Enforcement API",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-31-3",
+          "text": "Reporting API",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-31-4",
+          "text": "Meraki Dashboard API",
+          "correct": false
+        }
+      ],
+      "explanation": "The Umbrella Investigate API provides investigation data for domains, IP addresses, and related indicators.\n\nReferences:\nhttps://developer.cisco.com/docs/cloud-security/umbrella-api-reference-investigate-overview/"
+    },
+    {
+      "id": "sa4-class-33",
+      "type": "single",
+      "prompt": "Which feature lets developers customize the user interface on Cisco collaboration devices?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "sa4-class-33-1",
+          "text": "UI Extensions",
+          "correct": true
+        },
+        {
+          "id": "sa4-class-33-2",
+          "text": "xAPI",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-33-3",
+          "text": "Meraki templates",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-33-4",
+          "text": "Catalyst Center Intent API",
+          "correct": false
+        }
+      ],
+      "explanation": "UI Extensions let developers add custom controls and experiences to supported collaboration device interfaces.\n\nReferences:\nhttps://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/roomdevices-macros-samples"
+    },
+    {
+      "id": "sa4-class-35",
+      "type": "single",
+      "prompt": "Which data modeling language defines structured configuration and state data for network devices?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "sa4-class-35-1",
+          "text": "YANG",
+          "correct": true
+        },
+        {
+          "id": "sa4-class-35-2",
+          "text": "XML",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-35-3",
+          "text": "JSON",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-35-4",
+          "text": "YAML",
+          "correct": false
+        }
+      ],
+      "explanation": "YANG is a data modeling language for representing configuration and state data used with network management protocols."
+    },
+    {
+      "id": "sa4-class-38",
+      "type": "single",
+      "prompt": "Which message format is commonly associated with SOAP web services?",
+      "instruction": "Select one answer.",
+      "choices": [
+        {
+          "id": "sa4-class-38-1",
+          "text": "SOAP/XML",
+          "correct": true
+        },
+        {
+          "id": "sa4-class-38-2",
+          "text": "REST/JSON",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-38-3",
+          "text": "NETCONF/YANG",
+          "correct": false
+        },
+        {
+          "id": "sa4-class-38-4",
+          "text": "gRPC/Protocol Buffers",
+          "correct": false
+        }
+      ],
+      "explanation": "SOAP messages are XML-based and follow the SOAP envelope structure."
     }
   ]
 }

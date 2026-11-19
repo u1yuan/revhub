@@ -12,6 +12,7 @@ const sourceSections = JSON.parse(html.match(/<script id="quiz-data"[^>]*>(.*?)<
 const sourceA = sourceSections.filter((b: { section?: string }) => b.section === "summative").flatMap((b: { questions: unknown[] }) => b.questions) as any[];
 const sourceJson = read("../public/reviewers/devasc-m7-m8-question-bank.json");
 const sourceB = sourceJson.items.filter((q: { type: string }) => q.type === "mcq") as any[];
+const sourceAdditions = read("../data/sources/devnet-sa4-set-b-additions.json").items as any[];
 const a = bankFor("devnet", "sa4-mock-exam-set-a");
 const b = bankFor("devnet", "sa4-mock-exam-set-b");
 
@@ -31,8 +32,9 @@ test("SA4 imports preserve source order, text, choices, keys, explanations, and 
 
 test("Set B imports all MCQs in order and preserves exhibits and multi-select keys", () => {
   assert.equal(sourceB.length, 52);
-  assert.deepEqual(b.questions.map((q) => q.id), sourceB.map((q) => q.id));
+  assert.deepEqual(b.questions.slice(0, sourceB.length).map((q) => q.id), sourceB.map((q) => q.id));
   for (const [i, q] of b.questions.entries()) {
+    if (i >= sourceB.length) break;
     const src = sourceB[i]!;
     assert.equal(q.prompt, src.question, q.id);
     assert.deepEqual(q.choices.map((c) => c.text), src.choices, q.id);
@@ -44,6 +46,25 @@ test("Set B imports all MCQs in order and preserves exhibits and multi-select ke
   for (const q of b.questions.filter((x) => x.exhibits)) assert.ok(statSync(new URL(`../public${q.exhibits![0]!.src}`, import.meta.url)).size > 100, q.id);
 });
 
+test("Set B appends the 12 authored questions in source order with exact stems, ordered choices, keys, and references", () => {
+  const appended = b.questions.slice(sourceB.length);
+  assert.equal(sourceAdditions.length, 12);
+  assert.deepEqual(appended.map((q) => q.id), sourceAdditions.map((q) => q.id));
+  for (const [i, q] of appended.entries()) {
+    const src = sourceAdditions[i]!;
+    assert.equal(q.prompt, src.question, q.id);
+    assert.deepEqual(q.choices.map((c) => c.text), src.choices, q.id);
+    assert.deepEqual(q.choices.filter((c) => c.correct).map((c) => c.text), src.correct_answers, q.id);
+    assert.equal(q.type, "single", q.id);
+    for (const ref of src.sources ?? []) assert.ok(q.explanation?.includes(ref), q.id);
+  }
+  assert.deepEqual(appended.map((q) => q.id), [
+    "sa4-class-16", "sa4-class-19", "sa4-class-20", "sa4-class-21", "sa4-class-23", "sa4-class-24",
+    "sa4-class-27", "sa4-class-30", "sa4-class-31", "sa4-class-33", "sa4-class-35", "sa4-class-38",
+  ]);
+  assert.equal(b.questionCount, 64);
+});
+
 test("SA4 scoring excludes unscored questions; timers and independent attempts remain native", () => {
   const answersA: Record<string, Answer> = {};
   for (const q of a.questions) answersA[q.id] = { kind: "choice", choiceIds: q.choices.filter((c) => c.correct).map((c) => c.id) };
@@ -51,7 +72,7 @@ test("SA4 scoring excludes unscored questions; timers and independent attempts r
   const multi = b.questions.filter((q) => q.type === "multi");
   const answersB: Record<string, Answer> = {};
   for (const q of b.questions) answersB[q.id] = { kind: "choice", choiceIds: q.choices.filter((c) => c.correct).map((c) => c.id) };
-  assert.deepEqual(scoreAttempt(b.questions, answersB), { correct: 52, total: 52, percent: 100 });
+  assert.deepEqual(scoreAttempt(b.questions, answersB), { correct: 64, total: 64, percent: 100 });
   for (const q of multi) {
     const key = q.choices.filter((c) => c.correct).map((c) => c.id);
     assert.equal(gradeAnswer(q, { kind: "choice", choiceIds: key }), true, q.id);
